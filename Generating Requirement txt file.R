@@ -1,6 +1,6 @@
 load_libraries <- function() {
   packages <- c("rje", "rms", "MASS", "winprob", "dplyr", "lmtest", "sandwich", "VGAM", "beepr")
-  
+
   # Loop through the list of required packages
   for (pkg in packages) {
     # Install the package if it is not available

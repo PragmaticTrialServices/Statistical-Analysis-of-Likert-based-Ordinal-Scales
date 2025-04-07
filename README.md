@@ -56,7 +56,7 @@ install.packages(c("rje", "rms", "MASS", "dplyr", "lmtest", "sandwich", "VGAM", 
 Execute the main script:
 
 ```R
-source("Simulated Data Generation for Ordinal Outcomes in RCTs.R")
+source("20250402 - Simulated Data Generation for Ordinal Outcomes in RCTs.R")
 ```
 
 Results will be saved as a CSV file (`dfoutp - <sample-size>.csv`) in your working directory.

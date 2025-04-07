@@ -431,9 +431,7 @@ write.table(round(tableout, 3), "clipboard", sep = "\t")
 # Extract and display selected performance measures for PO, winP, binary, and linear regressions
 dfoutp = dplyr::select(dfout, c("n","runvglm", "n_simulations", "beta1", "poregp", "wpp", "bin7p", "linp", "nonpoLRTp"))
 write.table(round(dfoutp, 3), "clipboard", sep = "\t")
-write.csv(dfoutp, "dfoutp - 1500.csv", row.names = FALSE)
-cat("Simulation complete.\nCSV File with dfoutp was saved in working directory.")
-
-
-
-
+file_name = paste0("dfoutp - ", nlist, ".csv")
+write.csv(dfoutp, file_name, row.names = FALSE)
+paste0()
+cat(paste0("Simulation complete. ", n_simlist, " datasets were generated. Each with a sample size of ", nlist, ".\n"))
