@@ -1,0 +1,43 @@
+# R-specific files
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+
+# RStudio project files
+*.Rproj
+
+# VS Code settings
+.vscode/
+
+# Environment files
+.env
+*.env
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.~ 
+
+# Python cache (in case you're mixing R/Python)
+__pycache__/
+*.py[cod]
+
+# Node modules (if JS involved)
+node_modules/
+
+# Compiled code (e.g., Rcpp or others)
+*.o
+*.so
+*.dll
+
+# Package build folders
+.Rcheck/
+build/
+dist/
