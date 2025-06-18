@@ -11,8 +11,6 @@
 #      - Proportional‐odds assumption tests (Brant and LRT).
 #   5. Generates diagnostic plots.
 #
-# Author: Ahmed
-# Date: 2025-06-17
 # License: MIT
 #
 # Prerequisites:
@@ -23,7 +21,7 @@
 #
 # Usage:
 #   1. Set `file_path` to your CSV file location.
-#   2. Run in R/RStudio: source("win_probability_analysis.R")
+#   2. Run in R/RStudio: source("Appendix1.R")
 # -----------------------------------------------------------------------------
 
 # 0. Clear environment and console
