@@ -87,7 +87,7 @@ Output CSV provides:
 * **`poregbias`**: Bias of the PO model’s log-OR estimate: $\bar{\widehat{\beta_{PO}}}-\beta_{k=0}$.
 * **`poregcov`**: Empirical coverage probability of the 95% CI for the PO log-OR (proportion of sims whose CI contained the true estimate).
 * **`Poregp`**: Empirical power (or type-I error) of the PO Wald test: proportion of sims with \$p < .05\$ for the treatment effect in the PO model.
-* **`Wpbias`**: Bias of the win-probability estimate: $\overline{\widehat{\mathrm{WinP}}}-\mathrm{WinP}_{\text{true}}$, where $\mathrm{WinP}_{\text{true}}$ is estimated using Harrell’s approximation.
+* **`Wpbias`**: Bias of the win-probability estimate: $\overline{\widehat{\text{WinP}}}-\text{WinP}_{\text{true}}$, where $\text{WinP}_{\text{true}}$ is estimated using Harrell’s approximation.
 * **`Wpcov`**: Coverage probability of the 95% CI for the win probability.
 * **`Wpp`**: Empirical power of the win-probability test ($p < .05$).
 * **`bin7bias`**: Bias of the binary-logistic regression coefficient at threshold: $\overline{\widehat\beta_{\text{binary}}}-\beta_{\text{binary,true}}$.
