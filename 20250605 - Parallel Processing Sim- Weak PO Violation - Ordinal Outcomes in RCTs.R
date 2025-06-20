@@ -1,7 +1,7 @@
 # Clear environment & console
 rm(list = ls());  cat("\014")
 
-setwd("C://Users//aalja//OneDrive//01_Work//01_Projects//03_Analysis of ordinal data//01_A guide for ordinal data analysis//Code//R Code")
+setwd("PATH_FOR_WORKING_DIRECTORY")
 
 ################################################################################
 # SIMULATION OF ORDINAL OUTCOMES IN RCTS (GENERALIZED & PARALLELIZED)
@@ -87,7 +87,7 @@ save_csv_with_fallback <- function(df, proposed_name) {
     error = function(e) {
       # generate 10 random digits
       rand_tag <- paste0(sample(0:9, 10, replace = TRUE), collapse = "")
-      fallback <- paste0("file_name_random_", rand_tag, ".csv")
+      fallback <- paste0("fallback_simulation_summary_grid_strong_po_violation_", rand_tag, ".csv")
       write.csv(df, fallback, row.names = FALSE)
       warning(
         "Failed to save to '", proposed_name, 
@@ -356,12 +356,6 @@ run_one_scenario <- function(beta_1, nonPO, atten, sym_flag, n, n_simlist = 1000
   ) -> res_list
   
   raw <- do.call(rbind, res_list)
-  
-  #Standardised bias
-  # z_fun <- function(est, truth) {
-  #   valid_est <- est[!is.na(est)]; if (length(valid_est) < 2) return(NA)
-  #   (mean(valid_est) - truth) / (sd(valid_est) / sqrt(length(valid_est)))
-  # }
   
   # Relative bias  
   z_fun <- function(est, truth) {

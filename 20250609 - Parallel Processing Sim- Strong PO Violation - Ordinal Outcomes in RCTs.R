@@ -1,7 +1,7 @@
 # Clear environment & console
 rm(list = ls());  cat("\014")
 
-setwd("C://Users//aalja//OneDrive//01_Work//01_Projects//03_Analysis of ordinal data//01_A guide for ordinal data analysis//Code//R Code")
+setwd("PATH_FOR_WORKING_DIRECTORY")
 
 ################################################################################
 # SIMULATION OF ORDINAL OUTCOMES IN RCTS (GENERALIZED & PARALLELIZED)
@@ -20,9 +20,6 @@ setwd("C://Users//aalja//OneDrive//01_Work//01_Projects//03_Analysis of ordinal 
 #   duplication and improve clarity.
 # - Reproducibility: A single seed (14424) is used for all parallel tasks.
 ################################################################################
-# Clear environment & console
-rm(list = ls());  cat("\014")
-
 # Clear environment & console
 rm(list = ls());  cat("\014")
 
@@ -356,12 +353,6 @@ run_one_scenario <- function(beta_1, nonPO, atten, sym_flag, n, n_simlist = 1000
   ) -> res_list
   
   raw <- do.call(rbind, res_list)
-  
-  #Standardised bias
-  # z_fun <- function(est, truth) {
-  #   valid_est <- est[!is.na(est)]; if (length(valid_est) < 2) return(NA)
-  #   (mean(valid_est) - truth) / (sd(valid_est) / sqrt(length(valid_est)))
-  # }
 
   # Relative bias  
   z_fun <- function(est, truth) {
@@ -521,14 +512,3 @@ run_simulation_grid(beta_1list          = c(log(0.5),log(0.6),log(0.7),log(0.8),
                     ybinhigh            = 7,
                     runvglm             = 1,
                     seed                = 14424)
-
-
-# run_simulation_grid(beta_1list          = c(log(0.5),log(0.6),log(0.9),log(1.0)),
-#                     nonPOlist           = c(0, 1),
-#                     attenuateeffectlist = c(0),
-#                     symmetric           = c(1),
-#                     nlist               = c(300,600),
-#                     n_simlist           = 100, # Use 100 for a quick test run
-#                     ybinhigh            = 7,
-#                     runvglm             = 1,
-#                     seed                = 14424)
