@@ -1,5 +1,6 @@
 load_libraries <- function() {
-  packages <- c("rje", "rms", "MASS", "winprob", "dplyr", "lmtest", "sandwich", "VGAM", "beepr")
+  packages <- c("rms", "MASS", "winprob", "dplyr", "VGAM", "beepr",
+                "future", "future.apply", "progressr")
 
   # Loop through the list of required packages
   for (pkg in packages) {
