@@ -87,7 +87,7 @@ Output CSV provides:
 * **`poregbias`**: Bias of the PO model’s log-OR estimate: $\bar{\hat\beta}_{PO}-\beta_{k=0}$.
 * **`poregcov`**: Empirical coverage probability of the 95% CI for the PO log-OR (proportion of sims whose CI contained the true estimate).
 * **`Poregp`**: Empirical power (or type-I error) of the PO Wald test: proportion of sims with \$p < .05\$ for the treatment effect in the PO model.
-* **`Wpbias`**: Bias of the win-probability estimate: $\displaystyle\overline{\widehat{\text{WinP}}} - \text{WinP}_{\text{true}}$, where $\text{WinP}_{\text{true}}$ is estimated using Harrell’s approximation.
+* **`Wpbias`**: Bias of the win-probability estimate: $\overline{\widehat{\mathrm{WinP}}}-\mathrm{WinP}_{\text{true}}$, where $\mathrm{WinP}_{\text{true}}$ is estimated using Harrell’s approximation.
 * **`Wpcov`**: Coverage probability of the 95% CI for the win probability.
 * **`Wpp`**: Empirical power of the win-probability test ($p < .05$).
 * **`bin7bias`**: Bias of the binary-logistic regression coefficient at threshold: $\overline{\widehat\beta_{\text{binary}}}-\beta_{\text{binary,true}}$.
@@ -99,11 +99,10 @@ Output CSV provides:
 * **`Pobiasz`**: Relative bias (\%) for the PO estimate: $\displaystyle\frac{\overline{\widehat\beta_{\text{PO}}}-\beta_{\text{k=0}}}{\beta_{\text{k=0}}}\times 100%$.
 * **`Wpbiasz`**: Relative bias (%) for the win-probability estimate (analogous to above).
 * **`bin7biasz`**: Relative bias (%) for the binary-logistic estimate at $Y\ge7$.
-* **`Linbiasz`**: Relative bias (%) for the linear-regression estimate: $\displaystyle\frac{\overline{\widehat\beta_{\text{linear}}}-\Delta_{\text{true}}}{\Delta_{\text{true}}}\times 100%$.
+* **`Linbiasz`**: Relative bias (%) for the linear-regression estimate: $\displaystyle\frac{\overline{\widehat\beta_{\text{lin}}}-\Delta_{\text{true}}}{\Delta_{\text{true}}}\times 100%$.
 * **`sumnonpoErrFlag`**: Total count of simulation replicates where the VGAM non-PO fit flagged an error (i.e., model did not converge).
 * **`nonpoLRTpower`**: Among converged non-PO fits, the empirical power of the likelihood-ratio test comparing non-PO vs. parallel PO (proportion with LRT $p < 0.05$).
 * **`nonpoConvProp`**: Proportion of replicates where the VGAM non-PO model converged successfully.
-
 ## Citation
 
 If you use this code in your research, please cite our manuscript:
