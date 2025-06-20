@@ -98,11 +98,6 @@ Output CSV provides:
 * **`Lincov`**: Coverage probability of the 95% CI for the linear-regression slope.
 * **`Linp`**: Empirical power of the linear-regression test.
 * **`Pobiasz`**: Relative bias (\%) for the PO estimate: $\displaystyle\frac{\overline{\widehat\beta_{\text{PO}}}-\beta_{\text{k=0}}}{\beta_{\text{k=0}}}\times 100%$.
-$$
-\displaystyle
-\frac{\overline{\hat\beta}_{PO} - \beta_{k=0}}{\beta_{k=0}} \times 100\%
-$$
-
 * **`Wpbiasz`**: Relative bias (%) for the win-probability estimate (analogous to above).
 * **`bin7biasz`**: Relative bias (%) for the binary-logistic estimate at $Y\ge7$.
 * **`Linbiasz`**: Relative bias (%) for the linear-regression estimate: $\displaystyle\frac{\overline{\widehat\beta_{\text{linear}}}-\Delta_{\text{true}}}{\Delta_{\text{true}}}\times 100%$.
