@@ -96,7 +96,7 @@ Output CSV provides:
 * **`Linbias`**: Bias of the linear-regression estimate: $\overline{\widehat\beta\_{\text{linear}}}-\Delta\_{\text{true}}$, where $\Delta\_{\text{true}}$ is the true mean difference.
 * **`Lincov`**: Coverage probability of the 95% CI for the linear-regression slope.
 * **`Linp`**: Empirical power of the linear-regression test.
-* **`Pobiasz`**: Relative bias (\%) for the PO estimate:
+* **`Pobiasz`**: Relative bias (\%) for the PO estimate: $\displaystyle\frac{\overline{\widehat\beta_{\text{PO}}}-\beta_{\text{k=0}}}{\beta_{\text{k=0}}}\times 100%$.
 $$
 \displaystyle
 \frac{\overline{\hat\beta}_{PO} - \beta_{k=0}}{\beta_{k=0}} \times 100\%
@@ -104,7 +104,7 @@ $$
 
 * **`Wpbiasz`**: Relative bias (%) for the win-probability estimate (analogous to above).
 * **`bin7biasz`**: Relative bias (%) for the binary-logistic estimate at $Y\ge7$.
-* **`Linbiasz`**: Relative bias (%) for the linear-regression estimate: $\displaystyle\frac{\overline{\widehat\beta_{\text{lin}}}-\Delta_{\text{true}}}{\Delta_{\text{true}}}\times 100%$.
+* **`Linbiasz`**: Relative bias (%) for the linear-regression estimate: $\displaystyle\frac{\overline{\widehat\beta_{\text{linear}}}-\Delta_{\text{true}}}{\Delta_{\text{true}}}\times 100%$.
 * **`sumnonpoErrFlag`**: Total count of simulation replicates where the VGAM non-PO fit flagged an error (i.e., model did not converge).
 * **`nonpoLRTpower`**: Among converged non-PO fits, the empirical power of the likelihood-ratio test comparing non-PO vs. parallel PO (proportion with LRT $p < 0.05$).
 * **`nonpoConvProp`**: Proportion of replicates where the VGAM non-PO model converged successfully.
