@@ -12,8 +12,11 @@ We evaluated the performance of parametric and non-parametric methods for analyz
 
 ## Repository Contents
 
-- `Simulated Data Generation for Ordinal Outcomes in RCTs.R`: Main R script containing the functions and simulation workflow.
+- `20250609 - Parallel Processing Sim- Strong PO Violation - Ordinal Outcomes in RCTs.R`: Main R script containing the functions and simulation workflow.
 - `requirements.txt`: Lists R version and required packages with specific versions.
+- `Appendix1.R`: Online supplement file for our manuscript containing the R code for the MyTEMP PRO analysis.
+- `simulation_summary_grid_strong_po_violation.csv`: CSV file containing the simulation results for 192 scenarios. Includes scenarios where the PO violation is strong.
+- `simulation_summary_grid_weak_po_violation.csv`: CSV file containing the simulation results for 192 scenarios. Includes scenarios where there PO violation is weak.
 
 ---
 
@@ -25,7 +28,7 @@ Install necessary packages using:
 install.packages("devtools")
 devtools::install_github("proshano/winprob")
 
-install.packages(c("rje", "rms", "MASS", "dplyr", "lmtest", "sandwich", "VGAM", "beepr"))
+install.packages(c("rje", "rms", "MASS", "dplyr", "lmtest", "sandwich", "VGAM", "beepr", "future", "future.apply", "progressr"))
 ```
 
 ---
@@ -43,11 +46,11 @@ install.packages(c("rje", "rms", "MASS", "dplyr", "lmtest", "sandwich", "VGAM", 
     - `1`: Non-PO scenario
 
   - If `nonPOlist` = `1`, set `attenuateeffectlist`:
-    - `0`: Strengthen treatment effect
-    - `1`: Attenuate treatment effect
+    - `0`: PO violation strengthens treatment effect of the common odds ratio
+    - `1`: PO violation attenuates treatment effect of the common odds ratio
 
 - **Sample Size**:
-  - Adjust `nlist` to desired total sample size (e.g., 300, 1000, 1500, 2000).
+  - Adjust `nlist` to desired total sample size (e.g., 300, 600, 1200, 2400).
 
 ---
 
@@ -56,10 +59,10 @@ install.packages(c("rje", "rms", "MASS", "dplyr", "lmtest", "sandwich", "VGAM", 
 Execute the main script:
 
 ```R
-source("20250402 - Simulated Data Generation for Ordinal Outcomes in RCTs.R")
+source("20250609 - Parallel Processing Sim- Strong PO Violation - Ordinal Outcomes in RCTs.R")
 ```
 
-Results will be saved as a CSV file (`dfoutp - <sample-size>.csv`) in your working directory.
+Results will be saved as a CSV file in your working directory.
 
 ---
 
@@ -67,10 +70,11 @@ Results will be saved as a CSV file (`dfoutp - <sample-size>.csv`) in your worki
 
 Output CSV provides:
 - Bias, coverage probability, and p-values for:
-  - Proportional Odds regression
+  - Proportional odds logistic regression
   - Non-parametric win probability (winP)
   - Binary logistic regression
   - Linear regression
+  - Partial proportional odds logistic regresssion
 
 ---
 
