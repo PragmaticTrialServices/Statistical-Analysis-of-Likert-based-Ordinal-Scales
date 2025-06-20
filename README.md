@@ -12,8 +12,11 @@ We evaluated the performance of parametric and non-parametric methods for analyz
 
 ## Repository Contents
 
-- `Simulated Data Generation for Ordinal Outcomes in RCTs.R`: Main R script containing the functions and simulation workflow.
+- `20250609 - Parallel Processing Sim- Strong PO Violation - Ordinal Outcomes in RCTs.R`: Main R script containing the functions and simulation workflow.
 - `requirements.txt`: Lists R version and required packages with specific versions.
+- `Appendix1.R`: Online supplement file for our manuscript containing the R code for the MyTEMP PRO analysis.
+- `simulation_summary_grid_strong_po_violation.csv`: CSV file containing the simulation results for 192 scenarios. Includes scenarios where the PO violation is strong.
+- `simulation_summary_grid_weak_po_violation.csv`: CSV file containing the simulation results for 192 scenarios. Includes scenarios where there PO violation is weak.
 
 ---
 
